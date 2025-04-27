@@ -10,13 +10,11 @@ export default function Home() {
       <div className="flex sm:gap-4 gap-2">
         <Profile />
         <div className="w-full">
-          <div className="">
-            <div className="w-full">
-              <PointsBadges />
-            </div>
-            <div className="block mt-36 sm:mt-4">
-              <History />
-            </div>
+          <div className="w-full">
+            <PointsBadges />
+          </div>
+          <div className="sm:block hidden mt-4">
+            <History />
           </div>
         </div>
       </div>

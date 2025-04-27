@@ -5,10 +5,12 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { History } from "./history"
 
 export function PointsBadges() {
     const points = 1250
     return (
+        <>
         <div className="items-center block sm:flex sm:gap-4 block sm:h-[28dvh] h-[24dvh] sm:w-full w-full">
             {/* points */}
             <div className="p-3 col-span-4 h-full border rounded-lg shadow-md w-full">
@@ -19,7 +21,7 @@ export function PointsBadges() {
                 </div>
             </div>
             {/* badges */}
-            <div className="col-span-4 h-full border rounded-lg shadow-md w-full sm:mt-0 mt-2   ">
+            <div className="h-full border rounded-lg shadow-md w-full sm:mt-0 mt-2   ">
                 <p className="font-semibold p-3 text-sm lg:text-lg">My Badges :</p>
                 <Carousel className="sm:mt-2 sm:ml-20 sm:mr-20 ml-12 mr-12">
                     <CarouselPrevious className="cursor-pointer" />
@@ -40,6 +42,10 @@ export function PointsBadges() {
                     <CarouselNext className="cursor-pointer" />
                 </Carousel>
             </div>
+            <div className="sm:hidden mt-2">
+            <History/>
+            </div>
         </div>
+        </>
     )
 }
