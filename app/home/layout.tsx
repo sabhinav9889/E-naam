@@ -3,6 +3,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ModeToggle} from "../components/themetoggle";
 import { ProfileAvatar } from "../components/avatar";
+import Link from "next/link";
 // /app/auth/signup/layout.tsx
 // Correct layout.tsx example
 export default function SignupLayout({
@@ -26,7 +27,9 @@ export default function SignupLayout({
         </div>
         <div className="w-full justify-end flex gap-4 absolute z-10 right-4 mt-4">
         <ModeToggle />
+        <Link href="/home/profile">
         <ProfileAvatar/>
+        </Link>
         </div>
         {children}
       </main>

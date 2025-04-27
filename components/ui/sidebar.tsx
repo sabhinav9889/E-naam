@@ -4,12 +4,14 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
 import { PanelLeftIcon } from "lucide-react"
+import { usePathname } from 'next/navigation';
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+import Link from 'next/link';
 import { LayoutDashboard, Award, Users, Folders, LogOut } from "lucide-react"
 import {
   Sheet,
@@ -394,6 +396,11 @@ function SidebarContent({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
+  var dashboard = ["Dashboard", "Projects", "Employees", "Praise"]
+  var icons = [ <LayoutDashboard />, <Folders />, <Users />, <Award />]
+  var paths = ["/home/dashboard", "/home/projects", "/home/employees", "/home/praise"]
+  const pathname = usePathname();
+  console.log("pathname",pathname);
   return (
     <div
       data-slot="sidebar-group"
@@ -402,38 +409,19 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
       {...props}
     >
       <div className="text-sm w-full">
-      <span className="mt-1 pl-2 pr-2 flex hover:text-slate-500 cursor-pointer hover:bg-slate-100 rounded-md">
-        <span className="p-2">
-        <LayoutDashboard />
-        </span>
-      <span className="p-2">
-      Dashboard
-      </span>
-      </span>
-      <span className="mt-1 pl-2 pr-2 flex hover:text-slate-500 cursor-pointer hover:bg-slate-100 rounded-md">
-        <span className="p-2">
-        <Folders />
-        </span>
-      <span className="p-2">
-      Projects
-      </span>
-      </span>
-      <span className="mt-1 pl-2 pr-2 flex hover:text-slate-500 cursor-pointer hover:bg-slate-100 rounded-md"> 
-        <span className="p-2">
-        <Users />
-        </span>
-      <span className="p-2">
-      Employees
-      </span>
-      </span>
-      <span className="mt-1 pl-2 pr-2 flex hover:text-slate-500 cursor-pointer hover:bg-slate-100 rounded-md">
-        <span className="p-2">
-        <Award />
-        </span>
-      <span className="p-2">
-      Praise
-      </span>
-      </span>
+        {
+          dashboard.map((item, index) => {
+            const isActive = pathname === paths[index];
+            return (<Link href={paths[index]} key={index} className={`mt-1 pl-2 pr-2 flex text-slate-500 cursor-pointer rounded-md  ${isActive ? 'bg-gray-200 font-bold' : 'hover:bg-gray-200'}`}>
+              <span className="p-2">
+                {icons[index]}
+              </span>
+              <span className="p-2">
+                {item}
+              </span>
+            </Link>
+          )})
+        }
       </div>
     </div>
   )
@@ -615,7 +603,7 @@ function SidebarMenuAction({
         "peer-data-[size=lg]/menu-button:top-2.5",
         "group-data-[collapsible=icon]:hidden",
         showOnHover &&
-          "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
+        "peer-data-[active=true]/menu-button:text-sidebar-accent-foreground group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 md:opacity-0",
         className
       )}
       {...props}
