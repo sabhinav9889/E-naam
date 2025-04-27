@@ -21,7 +21,9 @@ export default function SignupLayout({
             <SidebarProvider>
       <AppSidebar />
       <main className="flex w-full">
+        <div className="absolute z-10 cursor-pointer">
         <SidebarTrigger />
+        </div>
         <div className="w-full justify-end flex gap-4 absolute z-10 right-4 mt-4">
         <ModeToggle />
         <ProfileAvatar/>

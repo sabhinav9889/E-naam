@@ -9,19 +9,19 @@ import {
 export function PointsBadges() {
     const points = 1250
     return (
-        <div className="items-center flex gap-4 w-full block h-[28dvh]">
+        <div className="items-center block sm:flex sm:gap-4 block sm:h-[28dvh] h-[24dvh] sm:w-full w-full">
             {/* points */}
             <div className="p-3 col-span-4 h-full border rounded-lg shadow-md w-full">
-                <p className="font-semibold">My Points :</p>
+                <p className="font-semibold text-sm lg:text-lg">My Points :</p>
                 <div className="flex justify-center items-center mt-[2dvh]">
-                    <img src="/points.jpeg" alt="points" className="lg:w-20 w-10" />
-                    <p className="font-semibold p-2 lg:text-2xl text-lg">{points} pts</p>
+                    <img src="/points.jpeg" alt="points" className="lg:w-20 w-5 sm:w-10" />
+                    <p className="font-semibold lg:p-2 md:p-0 p-2 lg:text-2xl text-lg">{points} pts</p>
                 </div>
             </div>
             {/* badges */}
-            <div className="col-span-4 h-full border rounded-lg shadow-md w-full">
-                <p className="font-semibold p-3">My Badges :</p>
-                <Carousel className="mt-2 ml-20 mr-20">
+            <div className="col-span-4 h-full border rounded-lg shadow-md w-full sm:mt-0 mt-2   ">
+                <p className="font-semibold p-3 text-sm lg:text-lg">My Badges :</p>
+                <Carousel className="sm:mt-2 sm:ml-20 sm:mr-20 ml-12 mr-12">
                     <CarouselPrevious className="cursor-pointer" />
                     <CarouselContent className="flex justify-centre">
                         <CarouselItem className="flex justify-center">

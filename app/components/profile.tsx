@@ -14,9 +14,9 @@ export function Profile() {
     const mobile = "+91 1234567890"
     const email = "sabhinav9889@gmail.com"
     return (
-        <div className="border rounded-md lg:p-1 shadow-md h-[84dvh] w-[20dvw] max-w-lg mx-auto">
+        <div className="border rounded-md lg:p-1 shadow-md h-[84dvh] sm:w-[20dvw] w-[40dvw]  max-w-lg mx-auto">
             <div className="flex p-1 flex-col items-center flex-row items-start md:gap-4">
-                <div className="w-24 h-24 overflow-hidden">
+                <div className="sm:w-24 sm:h-24 w-12 h-20 overflow-hidden">
                     <img
                         src="https://github.com/shadcn.png"
                         alt="profile"
@@ -29,8 +29,8 @@ export function Profile() {
                 </div>
             </div>
             <hr />
-            <div className="">
-                <div className="">
+            <div className="flex flex-col pt-2">
+                <div className="flex-1">
                     <h1 className="font-semibold text-sm">Main Info</h1>
                     <p className="pl-1 text-xs text-slate-600">Position</p>
                     <TooltipProvider>
@@ -67,7 +67,7 @@ export function Profile() {
                         <p className="p-1 text-xs">{dob}</p>
                     </div>
                 </div>
-                <div>
+                <div className="flex-1">
                     <h1 className="font-semibold mt-1 text-sm">Contact Info</h1>
                     <p className="pl-1 text-xs text-slate-600">Email</p>
                     <TooltipProvider>
