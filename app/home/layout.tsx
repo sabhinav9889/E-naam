@@ -1,0 +1,36 @@
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ModeToggle} from "../components/themetoggle";
+import { ProfileAvatar } from "../components/avatar";
+// /app/auth/signup/layout.tsx
+// Correct layout.tsx example
+export default function SignupLayout({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) {
+    return (
+      <>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <SidebarProvider>
+      <AppSidebar />
+      <main className="flex w-full">
+        <SidebarTrigger />
+        <div className="w-full justify-end flex gap-4 absolute z-10 right-4 mt-4">
+        <ModeToggle />
+        <ProfileAvatar/>
+        </div>
+        {children}
+      </main>
+    </SidebarProvider>
+          </ThemeProvider>
+      </>
+    );
+  }
+  
