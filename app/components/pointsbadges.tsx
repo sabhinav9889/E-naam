@@ -6,9 +6,11 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { History } from "./history"
+import {historyData, dateData} from "../constants/constant"
 
 export function PointsBadges() {
     const points = 1250
+
     return (
         <>
         <div className="items-center block sm:flex sm:gap-4 block sm:h-[28dvh] h-[24dvh] sm:w-full w-full">
@@ -43,7 +45,7 @@ export function PointsBadges() {
                 </Carousel>
             </div>
             <div className="sm:hidden mt-2">
-            <History/>
+            <History history={historyData} date={dateData}/>
             </div>
         </div>
         </>

@@ -28,7 +28,7 @@ export default function SignupLayout({
         <div className="w-full justify-end flex gap-4 absolute z-10 right-4 mt-4">
         <ModeToggle />
         <Link href="/home/profile">
-        <ProfileAvatar/>
+        <ProfileAvatar name="abhinav" url="https://github.com/shadcn.png"/>
         </Link>
         </div>
         {children}

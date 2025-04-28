@@ -5,14 +5,16 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-export function Profile() {
-    const userName = "abhinav"
-    const post = "Software Engineer"
-    const company = "FiftyFive Tech"
-    const location = "Gurugram"
-    const dob = "12/12/2000"
-    const mobile = "+91 1234567890"
-    const email = "sabhinav9889@gmail.com"
+interface ProfileProps {
+    userName: string;
+    post: string;
+    company: string;
+    location: string;
+    dob: string;
+    mobile: string;
+    email: string;
+}
+export function Profile( { userName, post, company, location, dob, mobile, email }: ProfileProps) {
     return (
         <div className="border rounded-md lg:p-1 shadow-md h-[84dvh] sm:w-[20dvw] w-[40dvw]  max-w-lg mx-auto">
             <div className="flex p-1 flex-col items-center flex-row items-start md:gap-4">
