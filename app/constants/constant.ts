@@ -29,7 +29,9 @@ const location = 'Gurugram';
 const dob = '12/12/2000';
 const mobile = '+91 1234567890';
 const email = 'sabhinav9889@gmail.com';
-
+const points = 1250;
+const awardSrclis = ["/bestaward.png", "/designaward.jpg", "/images2.jpeg", "/images1.jpeg"];
+const awardAlt = ["Best Award", "Design Award", "award image 2", "award image 1"];
 const employees = [
   {
     name: 'John Doe',
@@ -116,4 +118,4 @@ const employees = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHXxOvTrynNTf-Jbbn8ZnNDt7wC_gekyBwQ&s',
   },
 ];
-export { historyData, dateData, userName, post, company, location, dob, mobile, email, employees };
+export { historyData, dateData, userName, post, company, location, dob, mobile, email, employees, awardSrclis, awardAlt, points };
