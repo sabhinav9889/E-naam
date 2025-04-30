@@ -406,12 +406,8 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<'div'>) {
               key={index}
               className={`mt-1 pl-2 pr-2 flex text-slate-500 cursor-pointer rounded-md  ${isActive ? 'bg-gray-200 font-bold' : 'hover:bg-gray-200'}`}
             >
-              <span className="p-2" key={index}>
-                {icons[index]}
-              </span>
-              <span className="p-2" key={index}>
-                {item}
-              </span>
+              <span className="p-2">{icons[index]}</span>
+              <span className="p-2">{item}</span>
             </Link>
           );
         })}
