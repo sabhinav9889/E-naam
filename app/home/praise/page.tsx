@@ -33,11 +33,7 @@ export default function Praise() {
     return (
         <div className="w-full flex flex-col mt-16  sm:ml-16 sm:mr-16 ml-6 mr-6">   
             <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    // Add your form submission logic here
-                }}
-                className='p-4 bg-white border rounded-lg shadow-md'
+                className='p-4 border rounded-lg shadow-md'
             >
                 <div className="">
                 <div className="overflow-y-auto p-1">
@@ -101,7 +97,7 @@ export default function Praise() {
                             name="discription"
                             id="desc"
                             placeholder="Description"
-                            className="w-full border rounded-md sm:p-4 p-2 min-h-[1dvh] sm:max-h-[18dvh] max-h-[10dvh]"
+                            className="w-full border rounded-md sm:p-4 p-2 min-h-[1dvh] sm:max-h-[15dvh] max-h-[10dvh]"
                         ></textarea>
                     </div>
                     <div className="overflow-y-auto sm:p-1 w-full">
@@ -177,7 +173,7 @@ export default function Praise() {
                             }}
                         />
                     </div>
-                    <div className="flex flex-wrap overflow-y-auto p-1 max-h-[7dvh]">
+                    <div className="flex flex-wrap overflow-y-auto p-1 max-h-[7dvh] gap-1">
                         {project.map((proj, index) => (
                             <span
                                 key={index}
@@ -186,7 +182,7 @@ export default function Praise() {
                                 {proj}
                                 <button
                                     type="button"
-                                    className="text-red-500"
+                                    className="text-red-500 cursor-pointer"
                                     onClick={() =>
                                         setProject((prev) =>
                                             prev.filter((item, i) => i !== index)
@@ -204,10 +200,10 @@ export default function Praise() {
                     </div>
                 </div>
                 <div className="sm:flex justify-between flex-col">
-                    <div className='flex justify-between gap-4 flex-wrap'>
+                    <div className='flex justify-between gap-4 flex-wrap pt-2'>
                         <ComboboxDemo/>
                         <div className="flex gap-4">
-                            <Button>Cancel</Button>
+                            <Button type="button">Cancel</Button>
                             <Button type="submit">Post</Button>
                         </div>
                     </div>
