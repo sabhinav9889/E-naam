@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import ProfileCard from '@/app/components/profilecard';
-import { employees, User } from '@/app/constants/constant';
+import { User } from '@/app/constants/constant';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
