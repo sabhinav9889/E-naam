@@ -7,13 +7,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { History } from './history';
-import { historyData, dateData, awardSrclis, awardAlt} from '../constants/constant';
+import { historyData, dateData, awardSrclis, awardAlt } from '../constants/constant';
 
 type PointsBadgesProps = {
   points: string;
 };
 
-export function PointsBadges({points}: PointsBadgesProps) {
+export function PointsBadges({ points }: PointsBadgesProps) {
   return (
     <>
       <div className="items-center block sm:flex sm:gap-4 block sm:h-[28dvh] h-[24dvh] sm:w-full w-full">
@@ -31,11 +31,10 @@ export function PointsBadges({points}: PointsBadgesProps) {
           <Carousel className="mt-2 sm:ml-20 sm:mr-20 ml-12 mr-12">
             <CarouselPrevious className="cursor-pointer" />
             <CarouselContent className="flex justify-centre">
-              {
-                awardSrclis.map((src, index) => (
-                  <CarouselItem key={index} className="flex justify-center">
-                    <img src={src} alt={awardAlt[index]} width={40} />
-                  </CarouselItem>
+              {awardSrclis.map((src, index) => (
+                <CarouselItem key={index} className="flex justify-center">
+                  <img src={src} alt={awardAlt[index]} width={40} />
+                </CarouselItem>
               ))}
             </CarouselContent>
             <CarouselNext className="cursor-pointer" />

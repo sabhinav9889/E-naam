@@ -17,22 +17,22 @@ It allows users within an organization to recognize their peers, view and redeem
 
 ## 🔐 Authentication
 
-| Action | Route |
-|--------|-------|
-| Login  | `/auth/login` |
+| Action | Route          |
+| ------ | -------------- |
+| Login  | `/auth/login`  |
 | Signup | `/auth/signup` |
 
 ---
 
 ## 🧭 Post-Login Routes
 
-| Page           | Route               |
-|----------------|---------------------|
-| Home           | `/home`             |
-| Profile        | `/home/profile`     |
-| Dashboard      | `/home/dashboard`   |
-| Employees List | `/home/employees`   |
-| Praise Someone | `/home/praise`      |
+| Page           | Route             |
+| -------------- | ----------------- |
+| Home           | `/home`           |
+| Profile        | `/home/profile`   |
+| Dashboard      | `/home/dashboard` |
+| Employees List | `/home/employees` |
+| Praise Someone | `/home/praise`    |
 
 ---
 
@@ -50,8 +50,8 @@ pnpm install
 bun install
 ```
 
-
 ### 2. Run the Development Server
+
 ```bash
 npm run dev
 # or
@@ -63,9 +63,10 @@ bun dev
 ```
 
 ### Project Structure
+
 app/
-├── auth/           # Login & Signup pages
-├── home/           # Dashboard, profile, employees, praise
-├── layout.tsx      # Global layout
-├── page.tsx        # Landing page
+├── auth/ # Login & Signup pages
+├── home/ # Dashboard, profile, employees, praise
+├── layout.tsx # Global layout
+├── page.tsx # Landing page
 ...

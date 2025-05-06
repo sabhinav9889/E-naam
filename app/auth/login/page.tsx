@@ -13,13 +13,13 @@ const Login = () => {
   //         const formData = new FormData(e.currentTarget);
   //         const data = {
   //             description: formData.get('discription'),
-  //             projects: project,  
+  //             projects: project,
   //             praise_points: praisePts,
   //             awards: award,
   //             employees: employee,
   //         };
   //         getPraise(employee, praisePts)
-  //             .then((response) => {   
+  //             .then((response) => {
   //                 console.log(response);
   //                 // Handle success response
   //             }

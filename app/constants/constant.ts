@@ -22,17 +22,17 @@ export const dateData = [
   '7 month ago',
   '8 month ago',
 ];
-export const awardSrclis = ["/bestaward.png", "/designaward.jpg", "/images2.jpeg", "/images1.jpeg"];
-export const awardAlt = ["Best Award", "Design Award", "award image 2", "award image 1"];
+export const awardSrclis = ['/bestaward.png', '/designaward.jpg', '/images2.jpeg', '/images1.jpeg'];
+export const awardAlt = ['Best Award', 'Design Award', 'award image 2', 'award image 1'];
 export type User = {
-  contact_no: string
-  dob: string
-  email: string
-  first_name: string
-  id: string
-  last_name: string
-  location: string
-  password: string
-  points: string
-  post: string
-}
+  contact_no: string;
+  dob: string;
+  email: string;
+  first_name: string;
+  id: string;
+  last_name: string;
+  location: string;
+  password: string;
+  points: string;
+  post: string;
+};
