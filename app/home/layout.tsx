@@ -14,7 +14,7 @@ export default function SignupLayout({ children }: { children: React.ReactNode }
         <SidebarProvider>
           <AppSidebar />
           <main className="flex w-full">
-            <div className="absolute z-10 cursor-pointer">
+            <div className="absolute z-10">
               <SidebarTrigger />
             </div>
             <div className="w-full justify-end flex gap-4 absolute z-10 right-4 mt-4">

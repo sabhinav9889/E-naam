@@ -7,9 +7,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { History } from './history';
-import { historyData, dateData, awardSrclis, awardAlt, points } from '../constants/constant';
+import { historyData, dateData, awardSrclis, awardAlt} from '../constants/constant';
 
-export function PointsBadges() {
+type PointsBadgesProps = {
+  points: string;
+};
+
+export function PointsBadges({points}: PointsBadgesProps) {
   return (
     <>
       <div className="items-center block sm:flex sm:gap-4 block sm:h-[28dvh] h-[24dvh] sm:w-full w-full">

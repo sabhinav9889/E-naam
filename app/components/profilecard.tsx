@@ -9,7 +9,7 @@ interface ProfileCardProps {
 
 export default function ProfileCard({ name, title, level, imageUrl }: ProfileCardProps) {
   return (
-    <div className="rounded-2xl p-2 flex flex-col items-center w-42 shadow-md">
+    <div className="rounded-2xl p-2 flex flex-col items-center w-42 transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
       <div className="relative w-20 h-16 mb-4">
         <img
           src={imageUrl}

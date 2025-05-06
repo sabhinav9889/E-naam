@@ -118,4 +118,18 @@ const employees = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHXxOvTrynNTf-Jbbn8ZnNDt7wC_gekyBwQ&s',
   },
 ];
+
+export type User = {
+  contact_no: string
+  dob: string
+  email: string
+  first_name: string
+  id: string
+  last_name: string
+  location: string
+  password: string
+  points: string
+  post: string
+}
+
 export { historyData, dateData, userName, post, company, location, dob, mobile, email, employees, awardSrclis, awardAlt, points };

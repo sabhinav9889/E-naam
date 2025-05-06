@@ -8,6 +8,29 @@ import { Button } from '@/components/ui/button';
 
 const Login = () => {
   const [currentPassword, setCurrentPassword] = useState('');
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //         e.preventDefault();
+  //         const formData = new FormData(e.currentTarget);
+  //         const data = {
+  //             description: formData.get('discription'),
+  //             projects: project,  
+  //             praise_points: praisePts,
+  //             awards: award,
+  //             employees: employee,
+  //         };
+  //         getPraise(employee, praisePts)
+  //             .then((response) => {   
+  //                 console.log(response);
+  //                 // Handle success response
+  //             }
+  //             )
+  //             .catch((error) => {
+  //                 console.error('Error:', error);
+  //                 // Handle error response
+  //             }
+  //             );
+  //         console.log('Form data:', data);
+  // }
   return (
     <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">
       {/* Left Side */}

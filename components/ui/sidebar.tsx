@@ -257,7 +257,7 @@ function SidebarTrigger({ className, onClick, ...props }: React.ComponentProps<t
       data-slot="sidebar-trigger"
       variant="ghost"
       size="icon"
-      className={cn('size-7', className)}
+      className={cn('size-7', className, 'cursor-pointer')}
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
@@ -266,7 +266,7 @@ function SidebarTrigger({ className, onClick, ...props }: React.ComponentProps<t
     >
       <PanelLeftIcon />
       <span className="sr-only">Toggle Sidebar</span>
-    </Button>
+    </Button> 
   );
 }
 
@@ -389,7 +389,6 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<'div'>) {
   ];
   const paths = ['/home/dashboard', '/home/projects', '/home/employees', '/home/praise'];
   const pathname = usePathname();
-  console.log('pathname', pathname);
   return (
     <div
       data-slot="sidebar-group"
