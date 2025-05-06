@@ -1,9 +1,8 @@
 import { User } from "@/app/constants/constant";
-import { string } from "prop-types";
 
-async function sendPraise(userId: string, points: Number) {
+async function sendPraise(userId: string, points: number) {
     console.log("Sending praise to user:", userId, points);
-    const res = await fetch(`http://localhost:8000/emp/praisepts?user_id=${userId}&points=${points}`, {
+    await fetch(`http://localhost:8000/emp/praisepts?user_id=${userId}&points=${points}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -16,7 +15,7 @@ async function sendPraise(userId: string, points: Number) {
     return "success";
 }
 
-export async function getPraise(emp: User[], points: Number) {
+export async function getPraise(emp: User[], points: number) {
     for (let i = 0; i < emp.length; i++) {
         const userId = emp[i].id;
         await sendPraise(userId, points);
